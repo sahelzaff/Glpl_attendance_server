@@ -9,6 +9,13 @@ import deviceLogsRoutes from './routes/deviceLogsRoutes.js';
 const app = express();
 const port = process.env.PORT || 3001;
 
+
+const corsOptions = {
+  origin: ['http://localhost:3000', 'http://192.168.45.129:3012'],
+  optionsSuccessStatus: 200
+};
+
+
 app.use(cors());
 app.use(express.json());
 
